@@ -1,0 +1,41 @@
+@import "../../App.css";
+
+.section__progress {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0.7rem 1rem;
+}
+
+.register__progress {
+    width: 72px;
+    height: 12px;
+    background-color: #ddd;
+    position: relative;
+}
+
+.register__progress.make__progress {
+    position: relative;
+    transition: width 0.3s ease;
+}
+
+.register__progress::after {
+    width: 0;
+    height: 12px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: width 0.3s ease;
+}
+
+.register__progress.make__progress::after {
+    width: 72px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--c-p);
+}

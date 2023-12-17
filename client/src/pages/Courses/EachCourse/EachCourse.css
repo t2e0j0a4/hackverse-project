@@ -1,0 +1,215 @@
+.app__dashboard {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background-color: #f0f0f0;
+    flex-direction: row;
+    position: relative;
+    font-family: var(--f-p);
+}
+
+.dashboard__course {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem 1rem 272px;
+    background-color: transparent;
+}
+
+.course__center {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.course__info {
+    width: 100%;
+    height: 100%;
+    background-color: #232323;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.more__details {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.more__details > p:nth-child(1) {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--c-p);
+    text-align: center;
+}
+
+.more__details > h1:nth-child(2) {
+    font-size: 1.2rem;
+    color: #FFF;
+    text-align: left;
+    text-wrap: balance;
+}
+
+.more__details > p:nth-child(3) {
+    color: #DDD;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.more__details > p:nth-child(4) {
+    color: #FFF;
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 500;
+}
+
+.more__details > p:nth-child(4) span {
+    color: var(--c-p);
+}
+
+.other__cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.other__cards > p {
+    font-size: 0.9rem;
+    color: #FFF;
+    position: relative;
+}
+
+.other__cards > p:nth-child(1)::before {
+    content: "📅 "
+}
+
+.other__cards > p:nth-child(2)::before {
+    content: "🌐 ";
+}
+
+.money {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.money > p:nth-child(1) {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #FFF;
+}
+
+.money > p:nth-child(2) {
+    font-size: 0.9rem;
+    color: rgb(189, 189, 189);
+    text-decoration: line-through;
+}
+
+.more__details > button {
+    padding: 0.6rem 1rem;
+    border: 1.2px solid transparent;
+    border-radius: 8px;
+    background-color: var(--c-p);
+    font-family: 'Poppins';
+    font-size: 1rem;
+    color: #FFF;
+    outline: none;
+    transition: all 0.3s ease-in;
+}
+
+.more__details > button:hover {
+    border: 1.2px solid var(--c-p);
+    background-color: transparent;
+    color: var(--c-p);
+}
+
+.course__info > img {
+    width: 45%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16/11;
+    box-shadow: 0 0 8px 1px #215efa5f;
+}
+
+.course__includes {
+    width: 100%;
+} 
+
+.course__includes > h2 {
+    font-size: 1.4rem;
+    color: #232323;
+    text-align: left;
+}
+
+.includes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.4rem;
+    margin-top: 1rem;
+}
+
+.includes p {
+    font-size: 1rem;
+    color: #000;
+    text-align: left;
+}
+
+.includes > p:nth-child(1)::before {
+    content: "📺 ";
+}
+
+.includes > p:nth-child(2)::before {
+    content: "🧑🏻‍💻 ";
+}
+
+.includes > p:nth-child(3)::before {
+    content: "📜 ";
+}
+
+@media all and (width <= 1290px) {
+    .course__info {
+        flex-direction: column;
+    }
+
+    .course__info > img {
+        width: 100%;
+        order: 1;
+    }
+
+    .more__details {
+        width: 100%;
+        order: 2;
+    }
+}
+
+@media all and (max-width: 1024px) {
+
+    .app__dashboard {
+        flex-direction: column;
+    }
+
+    .dashboard__course {
+        padding: 1.2rem;
+    }
+
+}

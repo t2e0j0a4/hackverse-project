@@ -1,0 +1,85 @@
+.app__dashboard {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background-color: #f0f0f0;
+    flex-direction: row;
+    position: relative;
+    font-family: var(--f-p);
+}
+
+.dashboard__home {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem 1rem 272px;
+    background-color: transparent;
+}
+
+.home__center {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.courses, .workshops, .ongoing__course {
+    width: 100%;
+    height: 100%;
+}
+
+.courses > h2, .workshops > h2, .ongoing__course > h2 {
+    font-size: 1.4rem;
+    color: #232323;
+    text-align: left;
+}
+
+.all__courses, .all__workshops {
+    width: 100%;
+    padding: 0.4rem;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.4rem 1rem;
+}
+
+@media all and (min-width: 1306px) {
+    .all__courses, .all__workshops {
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    }
+}
+
+@media all and (max-width: 1024px) {
+
+    .app__dashboard {
+        flex-direction: column;
+    }
+
+    .dashboard__home {
+        padding: 1.2rem;
+    }
+
+}
+
+@media all and (max-width: 800px) {
+    .all__courses, .all__workshops {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-x: scroll;
+    }
+
+    .all__workshops .each__event {
+        width: 240px;
+    }
+
+    .all__courses::-webkit-scrollbar, .all__workshops::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
