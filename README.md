@@ -1,6 +1,7 @@
 # Student LMS with Gamification, Recommendation, and Personalized Learning Path
 
-<video src="client\public\hackverse.mp4" controls title="Student LMS"></video>
+https://github.com/t2e0j0a4/hackverse-project/assets/96101829/1d8587bc-1304-4c35-85ba-5037fbfac416
+
 
 ## Introduction
 
